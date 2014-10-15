@@ -104,6 +104,7 @@ function doLogin(req,res){
 }
 
 function logout(req,res){
+    // 这个checkLogin，在这里会不会有问题？
     checkLogin(req,res);
     req.session.user =  null;
     req.flash('success', '登出成功');
